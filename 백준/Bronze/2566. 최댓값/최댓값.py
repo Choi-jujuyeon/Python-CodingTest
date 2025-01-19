@@ -1,15 +1,9 @@
 arr=[]
-for _ in range(9):
-    row=list(map(int,input().split()))
-    arr.append(row)
-    
-maxVal=-1
-maxR, maxC = 0, 0
+marr=[]
 for i in range(9):
-    for j in range(9):
-        if arr[i][j] > maxVal:
-            maxVal = arr[i][j]
-            maxR=i+1
-            maxC=j+1
-print(maxVal)        
-print(maxR,maxC)
+    arr.append(list(map(int,input().split())))
+    marr.append(max(arr[i]))
+M=max(marr)
+row=marr.index(M)
+print(M)
+print(row+1, arr[row].index(M)+1)
