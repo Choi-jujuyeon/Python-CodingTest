@@ -1,5 +1,3 @@
 def solution(num_str):
-    s=0
-    for i in list(num_str):
-        s+=int(i)
-    return s
+    return sum(int(i) for i in num_str)
+    
