@@ -1,2 +1,2 @@
 def solution(a, b):
-    return int(str(a)+str(b)) if str(a)+str(b) >str(b)+str(a) else int(str(b)+str(a))
+    return int(max(f'{a}{b}',f'{b}{a}'))
