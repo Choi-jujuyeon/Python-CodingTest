@@ -1,6 +1,5 @@
 def solution(num_list):
     count=0
-    a=[]
     for i in range(len(num_list)):
         while num_list[i]!=1:
             if num_list[i]%2==0:
@@ -9,5 +8,4 @@ def solution(num_list):
             else:
                 num_list[i]=(num_list[i]-1)/2
                 count+=1
-        
     return count
