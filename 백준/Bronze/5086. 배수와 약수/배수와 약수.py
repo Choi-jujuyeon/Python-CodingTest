@@ -1,15 +1,10 @@
-arr=[]
 while True:
     a,b=map(int,input().split())
     if a == 0 and b == 0:
-        break
-    
-    if b%a==0:
-        arr.append("factor\n")
+        break   
+    elif b%a==0:
+        print("factor")
     elif a%b==0:
-        arr.append('multiple\n')
+        print('multiple')
     else:
-        arr.append('neither\n')    
-    if a==0 and b==0:
-        break
-print(''.join(arr))
+        print('neither')    
