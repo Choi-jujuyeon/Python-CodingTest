@@ -1,3 +1,5 @@
 def solution(num_list):
-    a=len([i for i in num_list if i%2==0 ])
-    return [a,len(num_list)-a]
+    a=[0,0]
+    for i in num_list:
+        a[i%2]+=1
+    return a
