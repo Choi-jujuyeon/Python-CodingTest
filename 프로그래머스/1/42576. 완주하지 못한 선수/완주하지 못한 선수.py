@@ -1,12 +1,20 @@
 def solution(participant, completion):
     #문제의 핵심: 참가 못한 1명 찾기
-    #Sort/Loop할 경우
+    #Hash 사용
     
-    participant.sort()
-    completion.sort()
+    #01.participant hash sum
+    hashDict={}
+    sumHash=0
+    for i in participant:
+        h=hash(i)
+        hashDict[h]=i
+        sumHash+=h
     
-    for i in range(len(completion)):
-        if completion[i]!=participant[i]:
-            return participant[i] 
-    return participant[-1]
+    #02.completion hash 차이
+    for i in completion:
+        sumHash-=hash(i)
         
+    #03.남은 값 
+    return hashDict[sumHash]
+    
+    
