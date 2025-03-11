@@ -1,7 +1,8 @@
 def solution(phone_book):
     s=sorted(phone_book)
-    for i in range(len(phone_book)-1):
-        if s[i+1].startswith(s[i]):
+    for a,b in zip(s,s[1:]):
+        if b.startswith(a):
             return False
     return True
+            
         
