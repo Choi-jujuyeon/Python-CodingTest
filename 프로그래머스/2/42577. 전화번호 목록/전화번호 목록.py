@@ -1,8 +1,13 @@
 def solution(phone_book):
-    s=sorted(phone_book)
-    for a,b in zip(s,s[1:]):
-        if b.startswith(a):
-            return False
+    hashDict={}
+    for i in phone_book:
+        hashDict[i]=1
+    
+    for i in phone_book:
+        jj=''
+        for j in i:
+            jj+=j
+            if jj in hashDict and jj!=i:
+                return False
     return True
-            
         
