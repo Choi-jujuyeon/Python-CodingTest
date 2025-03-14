@@ -1,13 +1,8 @@
 def solution(phone_book):
-    hashDict={}
-    for i in phone_book:
-        hashDict[i]=1
+    pp=sorted(phone_book)
     
-    for i in phone_book:
-        jj=''
-        for j in i:
-            jj+=j
-            if jj in hashDict and jj!=i:
-                return False
+    for i in range(len(pp)-1):
+        if pp[i+1].startswith(pp[i]):
+            return False
     return True
         
