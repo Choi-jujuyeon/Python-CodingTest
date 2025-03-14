@@ -1,4 +1,7 @@
-from collections import Counter
 def solution(participant, completion):
-    return list(Counter(participant)-Counter(completion))[0]
-    
+    p=sorted(participant)
+    c=sorted(completion)
+    for i in range(len(c)):
+        if c[i]!= p[i]:
+            return p[i]
+    return p[-1]
