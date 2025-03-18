@@ -1,6 +1,9 @@
-n=int(input())
-arr=[ord(i)-ord('a')+1 for i in list(input())]
-sum=0
-for i in range(len(arr)):
-    sum+=arr[i]*31**(i)
-print(sum)
+a=int(input())
+arr=list(input())
+
+hash=0
+p=1
+for i in range(a):
+    hash=(hash+(ord(arr[i])-ord('a')+1)*p)%1234567891
+    p=(31*p)%1234567891
+print(hash)
