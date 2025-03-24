@@ -1,11 +1,3 @@
 def solution(lines):
-    arr=[0]*200
-    for i,j in lines:
-        for i in range(100+i,100+j):
-            arr[i]+=1
-    sum=0
-    for i in set(arr):
-        print(i)
-        if i>1:
-            sum+=arr.count(i)
-    return (sum)
+    arr=[set(range(min(i),max(i)))for i in lines ]
+    return len(arr[0]&arr[1] | arr[0]&arr[2] | arr[1]&arr[2])
