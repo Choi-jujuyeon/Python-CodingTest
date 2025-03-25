@@ -1,18 +1,15 @@
 def solution(dartResult):
     result=[]
     prev=0
+    arr=['S','D','T']
     dartResult=dartResult.replace('10','a')
     for i in dartResult:
         if i=='a':
             prev=10
-        if i.isdigit():
+        elif i.isdigit():
             prev=int(i)
-        elif i=='S':
-            result.append(prev)
-        elif i=='D':
-            result.append(prev**2)
-        elif i=='T':
-            result.append(prev**3)
+        elif i in arr:
+            result.append(prev**(arr.index(i)+1))
         elif i=='*':
             if len(result)==1:
                 result[-1]=result[-1]*2
