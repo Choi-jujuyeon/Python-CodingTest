@@ -1,7 +1,7 @@
 def solution(dartResult):
     result=[]
     prev=0
-    dartResult=dartResult.replace(str(10),'a')
+    dartResult=dartResult.replace('10','a')
     for i in dartResult:
         if i=='a':
             prev=10
