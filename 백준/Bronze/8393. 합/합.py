@@ -1,3 +1,5 @@
 a=int(input())
-S=sum(range(1,a+1))
-print(S)
+b=0
+for i in range(1,a+1):
+    b+=i
+print(b)
