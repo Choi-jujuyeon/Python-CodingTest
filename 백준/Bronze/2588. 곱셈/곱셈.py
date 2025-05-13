@@ -1,6 +1,5 @@
 a=int(input())
 b=input()
-print(a*int(b[2]))
-print(a*int(b[1]))
-print(a*int(b[0]))
+for i in b[::-1]:
+    print(int(i)*a)
 print(a*int(b))
