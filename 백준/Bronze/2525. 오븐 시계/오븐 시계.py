@@ -1,9 +1,7 @@
-h,m=map(int,input().split())
-c=int(input())   
-tm=(h*60)+m+c
-H=tm//60
-M=tm%60
-if H>=24:
-    print(H-24,M)
-else:
-    print(H,M)
+sh,sm=map(int,input().split())
+t=int(input())
+result=sh*60+sm+t
+h=result//60
+m=result%60
+if h>=24: h%=24
+print(h,m)
