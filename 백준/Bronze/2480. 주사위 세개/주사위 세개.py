@@ -1,14 +1,11 @@
 from collections import Counter
-
-a, b, c = map(int, input().split())
-ct = Counter([a, b, c])
-
-if a == b == c:
-    print(10000+a*1000)
-elif ct[a] >= 2 or ct[b] >= 2:
-    if ct[a] >= 2:
-        print(1000+a*100)
-    else:
-        print(1000+b*100)
+arr=list(map(int,input().split()))
+for k,v in sorted(Counter(arr).items(),reverse=True):
+    if v==3:
+        print(10000+k*1000)
+        break
+    elif v==2:
+        print(1000+k*100)
+        break
 else:
-    print(max(a,b,c)*100)
+    print(max(arr)*100)
