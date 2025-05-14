@@ -1,7 +1,6 @@
-n,x=map(int,input().split())
-
-a = list(map(int, input().split()[:n]))
-
-for i in range(n):
-  if a[i]<x:
-    print(a[i],end=" ")
+import sys
+a,b=map(int,input().split())
+arr=list(map(int,sys.stdin.readline().split()))
+for i in arr:
+    if i<b:
+        print(i, end=" ")    
