@@ -1,8 +1,7 @@
 a=input()
-for i in range(ord('a'),ord('z')+1):
-    ch=chr(i)
-    if ch in a:
-        print(a.index(ch),end=" ")
-    else:
-        print(-1, end=" ")
-        
+r_arr=[-1]*26
+
+for idx,ch in enumerate(a):
+    if r_arr[ord(ch)-97]==-1:
+        r_arr[ord(ch)-97]=idx
+print(*r_arr)
