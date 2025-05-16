@@ -1,7 +1,6 @@
-a=['c=','c-','dz=','d-','lj','nj','s=','z=']
-
-input=input()
-for i in a:
-    if i in input:
-        input=input.replace(i,'x')
-print (len(input))
+arr=['c=','c-','dz=','d-','lj','nj','s=','z=']
+a=input()
+for i in arr:
+    if i in a:
+        a=a.replace(i,'A')
+print(len(a))
