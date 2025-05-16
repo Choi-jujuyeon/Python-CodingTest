@@ -1,17 +1,8 @@
-d={
-    3:'ABC',
-    4:'DEF',
-    5:'GHI',
-    6:'JKL',
-    7:'MNO',
-    8:'PQRS',
-    9:'TUV',
-    10:'WXYZ',
-}
+num=['ABC','DEF','GHI','JKL','MNO','PQRS','TUV','WXYZ']
 a=input()
 sum=0
-for i in a:
-    for k,v in d.items():
-        if i in v:
-            sum+=k
+for i in num:
+    for j in a:
+        if j in i:
+            sum+=num.index(i)+3
 print(sum)
