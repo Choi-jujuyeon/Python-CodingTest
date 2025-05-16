@@ -1,6 +1,6 @@
-a=int(input())
-b=list(map(int,input()))
-sum=0
-for i in range(a):
-    sum+=b[i]
-print(sum)
+n=int(input())
+x=input()
+r=0
+for i in range(n):
+    r+=int(x[i])
+print(r)
