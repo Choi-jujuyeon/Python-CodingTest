@@ -1,12 +1,13 @@
-T = int(input())
-for _ in range(T):
-    quiz = input().strip()
-    score = 0
-    consecutive = 0
-    for ch in quiz:
-        if ch == 'O':
-            consecutive += 1
-            score += consecutive
+T=int(input())
+
+for i in range(T):
+    a=input()
+    sum = 0
+    count=0
+    for i in a:
+        if i=='X':
+            count=0
         else:
-            consecutive = 0
-    print(score)
+            count+=1
+            sum+=count
+    print(sum)
