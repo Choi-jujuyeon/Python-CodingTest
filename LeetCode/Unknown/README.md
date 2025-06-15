@@ -18,4 +18,9 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/Choi-jujuyeon/Python-CodingTest/tree/master/0013-roman-to-integer) |
+| [1894-merge-strings-alternately](https://github.com/Choi-jujuyeon/Python-CodingTest/tree/master/1894-merge-strings-alternately) |
+## Two Pointers
+|  |
+| ------- |
+| [1894-merge-strings-alternately](https://github.com/Choi-jujuyeon/Python-CodingTest/tree/master/1894-merge-strings-alternately) |
 <!---LeetCode Topics End-->
