@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/Choi-jujuyeon/Python-CodingTest/tree/master/0013-roman-to-integer) |
+| [0070-climbing-stairs](https://github.com/Choi-jujuyeon/Python-CodingTest/tree/master/0070-climbing-stairs) |
 ## String
 |  |
 | ------- |
@@ -23,4 +24,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1894-merge-strings-alternately](https://github.com/Choi-jujuyeon/Python-CodingTest/tree/master/1894-merge-strings-alternately) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/Choi-jujuyeon/Python-CodingTest/tree/master/0070-climbing-stairs) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/Choi-jujuyeon/Python-CodingTest/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
