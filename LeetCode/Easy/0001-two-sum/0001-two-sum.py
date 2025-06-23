@@ -1,10 +1,9 @@
 class Solution(object):
-    def twoSum(self, nums, target): 
-        D={}
-        for i in range(len(nums)):
-            diff=target-nums[i]
-            if diff in D:
-                return [D[diff], i]
-            else:
-                D[nums[i]] = i
-        
+    def twoSum(self, nums, target):
+        hashMap={}
+        for idx,num in enumerate(nums):
+            temp= target-num
+            if temp in hashMap:
+                return [hashMap[temp],idx]
+            
+            hashMap[num] = idx
