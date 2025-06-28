@@ -7,3 +7,4 @@ class Solution(object):
                 return [hashMap[temp],idx]
             
             hashMap[num] = idx
+        return hahsMap
