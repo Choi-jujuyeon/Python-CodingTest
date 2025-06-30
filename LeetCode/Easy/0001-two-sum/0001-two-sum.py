@@ -1,10 +1,10 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        hashMap={}
+        hashMap={} #값:인덱스
+
         for idx,num in enumerate(nums):
-            temp= target-num
-            if temp in hashMap:
-                return [hashMap[temp],idx]
-            
-            hashMap[num] = idx
-        return hahsMap
+            t=target-num
+            if t in hashMap:
+                return [hashMap[t], idx]
+            hashMap[num]=idx
+        
