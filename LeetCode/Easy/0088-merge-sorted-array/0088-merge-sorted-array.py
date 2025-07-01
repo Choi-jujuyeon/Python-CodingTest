@@ -14,7 +14,9 @@ class Solution:
                 nums1[last] = nums2[n-1]
                 n-=1
             last-=1
-            
+
+        # nums1은 다 0이라 위 조건에 안 걸릴 경우
+        # num2에 값이 남아 있는 경우
         while n>0:
             nums1[last] = nums2[n-1]
             n,last = n-1, last -1
