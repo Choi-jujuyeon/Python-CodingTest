@@ -1,15 +1,17 @@
 class Solution:
     def simplifyPath(self, path: str) -> str:
+        pp=path.split("/")
         stack=[]
-        cur ="" #파일 경로 알려줌
-        
-        for i in path+"/":
-            if i =="/":
-                if cur=="..":
-                    if stack: stack.pop()
-                elif cur !="" and cur !=".":
-                    stack.append(cur)
-                cur=""
+
+        for i in pp:
+            if not i or i ==".":
+                continue
+            if i=="..":
+                if stack:
+                    stack.pop()
             else:
-                cur+=i
-        return "/"+'/'.join(stack)
+                stack.append(i)
+        return "/"+"/".join(stack)
+            
+
+        
