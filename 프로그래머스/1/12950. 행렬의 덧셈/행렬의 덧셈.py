@@ -1,6 +1,2 @@
 def solution(arr1, arr2):
-    re= [[0 for _ in range(len(arr1[0]))] for _ in range(len(arr1))]
-    for i in range(len(arr1)):
-        for j in range(len(arr1[0])):
-            re[i][j]=arr1[i][j]+arr2[i][j]
-    return re
+    return [[c+d for c,d in zip(a1,b1)] for a1,b1 in zip(arr1,arr2)]
