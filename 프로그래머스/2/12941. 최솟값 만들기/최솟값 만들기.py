@@ -1,7 +1,2 @@
 def solution(A,B):
-    A.sort()
-    B.sort(reverse=True)
-    r=0
-    for i in range(len(A)):
-        r+=A[i]*B[i]
-    return r
+    return sum([a*b for a,b in zip(sorted(A),sorted(B,reverse=True))])
