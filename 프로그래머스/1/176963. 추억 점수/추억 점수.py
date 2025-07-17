@@ -1,8 +1,7 @@
 def solution(name, yearning, photo):
     dic={}
     res=[]
-    for n,y in zip(name,yearning):
-        dic[n] = y
+    dic=dict(zip(name,yearning))
     for i in photo:
         count=0
         for j in i:
