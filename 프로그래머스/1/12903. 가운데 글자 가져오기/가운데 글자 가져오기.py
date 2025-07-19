@@ -1,5 +1,6 @@
 def solution(s):
-    if len(s)%2==0:     #짝수
-        return s[len(s)//2-1:len(s)//2+1]
+    l=len(s)//2
+    if len(s)%2==0:
+        return s[l-1:l+1]
     else:
-        return s[len(s)//2]
+        return s[l]
