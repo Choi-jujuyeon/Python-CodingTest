@@ -1,6 +1,2 @@
 def solution(x):
-    re=sum([int(i) for i in str(x)])
-    if x%re ==0:
-        return True
-    else:
-        return False
+    return x%sum([int(i) for i in str(x)])==0
