@@ -1,3 +1,3 @@
 def solution(n):
-    result=sorted(str(n), reverse=True)
-    return int("".join(result))
+    a="".join((sorted([i for i in str(n)], reverse=True)))
+    return int(a)
