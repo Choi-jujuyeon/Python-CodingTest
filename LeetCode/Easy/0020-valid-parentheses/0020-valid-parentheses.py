@@ -3,15 +3,15 @@ class Solution:
         dic={
             ']':'[',
             ')':'(',
-            '}':'{',
+            "}":"{"
         }
-        stack=[]
+        res=[]
         for i in s:
-            if i in ']})':
-                if stack==[] or stack[-1]!= dic[i] :
+            if i in "{([":
+                res.append(i)
+            else:
+                if not res or dic[i] != res[-1]:
                     return False
                 else:
-                    stack.pop()
-            else:
-                stack.append(i)
-        return False if stack else True
+                    res.pop()
+        return False if res else True
