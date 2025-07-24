@@ -3,18 +3,18 @@ class Solution:
          # Add open: if open <n
          # Add close: if close<open
          # valid(stop) open==close==n
-        
-        stack=[]
+        stack=[]    #임시저장
         res=[]
+
         def backtrack(openN,closedN):
-            if openN == closedN ==n:
+            if n==openN ==closedN:
                 res.append("".join(stack))
-                return 
-            if openN < n:
+                return
+            if openN<n:
                 stack.append("(")
                 backtrack(openN+1,closedN)
                 stack.pop()
-            if closedN <openN:
+            if closedN<openN:
                 stack.append(")")
                 backtrack(openN,closedN+1)
                 stack.pop()
