@@ -1,17 +1,16 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        dic={
-            ']':'[',
-            ')':'(',
-            "}":"{"
+        stack=[]
+        closeToOpen={
+            "}":"{",
+            ")":"(",
+            "]":"["
         }
-        res=[]
         for i in s:
             if i in "{([":
-                res.append(i)
+                stack.append(i)
             else:
-                if not res or dic[i] != res[-1]:
-                    return False
-                else:
-                    res.pop()
-        return False if res else True
+                if stack and stack[-1] == closeToOpen[i] :
+                    stack.pop()
+                else: return False
+        return False if stack else True
