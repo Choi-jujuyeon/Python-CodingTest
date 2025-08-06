@@ -1,14 +1,14 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        res=max(nums)
-        curMin, curMax=1,1 #곱하기에서 영향x
-        
-        for i in nums:
-            if i==0:
-                curMin,curMax=1,1
-                
-            temp=curMax
-            curMax=max(i*curMax, i*curMin,i)
-            curMin=min(i*temp, i*curMin,i)
-            res=max(res,curMax)
+        res = max(nums)
+        curMin, curMax = 1,1
+
+        for n in nums:
+            if n==0:
+                curMin,curMax = 1,1
+                continue
+            temp = curMax
+            curMax = max(n*curMax,n,n*curMin)
+            curMin = min(n*temp,n,n*curMin)
+            res=max(curMax,res)
         return res
