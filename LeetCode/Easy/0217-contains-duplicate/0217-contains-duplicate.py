@@ -6,5 +6,6 @@ class Solution:
         while l<len(nums):
             if nums[l-1]==nums[l]:
                 return True
+                break     
             l+=1
         return False
