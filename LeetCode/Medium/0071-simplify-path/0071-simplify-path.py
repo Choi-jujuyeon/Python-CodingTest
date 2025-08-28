@@ -1,18 +1,16 @@
 class Solution:
     def simplifyPath(self, path: str) -> str:
-        res=[]
+        stack=[]
         cur=""
-
+        
         for i in path+"/":
-            if i=="/":
+            if i =="/":
                 if cur=="..":
-                    if res:
-                        res.pop()
-                elif cur!="." and cur!="":
-                    res.append(cur)
+                    if stack: stack.pop()
+                elif cur!="" and cur!=".":
+                    stack.append(cur)
                 cur=""
-
-            else:   #문자열
+            else:
                 cur+=i
-        return "/"+"/".join(res)
-
+                
+        return "/"+'/'.join(stack)
