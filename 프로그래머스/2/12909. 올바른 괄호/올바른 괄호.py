@@ -1,10 +1,19 @@
 def solution(s):
+    
     stack=[]
+    dic={
+        ")":"("
+    }
     for i in s:
-        if stack!=[] and stack[-1]=='(' and i==')':
-            stack.pop()
+        if stack and i in dic:
+            if stack[-1] == dic[i]:
+                stack.pop()
+            else:
+                stack.append(i)
         else:
             stack.append(i)
     return False if stack else True
+                
             
             
+        
