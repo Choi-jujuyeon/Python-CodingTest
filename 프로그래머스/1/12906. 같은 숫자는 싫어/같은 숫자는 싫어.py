@@ -1,7 +1,18 @@
 def solution(arr):
-    arr2=[]
+    stack=[arr[0]]
+    # stack=[]
+    
     for i in arr:
-        if arr2==[] or arr2[-1]!=i:
-            arr2.append(i)
+        if stack[-1] ==i:
+            continue
+        else:
+            stack.append(i)
+        # if stack:
+        #     if stack[-1] !=i:
+        #         stack.append(i)
+        #     else:
+        #         continue
+        # else: stack.append(i)
             
-    return arr2
+    return stack
+                
