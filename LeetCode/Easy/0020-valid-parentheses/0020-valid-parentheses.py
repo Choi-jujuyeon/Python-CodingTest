@@ -8,10 +8,8 @@ class Solution:
         stack=[]
         for i in s:
             if i in dic:
-                if stack:
-                    if dic[i] == stack[-1]:
+                if stack and dic[i] == stack[-1]:
                         stack.pop()
-                    else: return False
                 else:
                     return False
             else:
