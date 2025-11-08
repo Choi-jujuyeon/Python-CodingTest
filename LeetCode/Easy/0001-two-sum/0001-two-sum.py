@@ -1,11 +1,7 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        hashMap={}
-        
-        for i,n in enumerate(nums):
-            if (target-n) in hashMap:
-                return hashMap[target-n], i
-            else:
-               hashMap[n] =i
-        
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                if nums[i]+nums[j]==target:
+                    return [i,j]
                 
