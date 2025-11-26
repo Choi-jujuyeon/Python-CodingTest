@@ -1,6 +1,6 @@
-n=int(input())
-x=input()
-r=0
-for i in range(n):
-    r+=int(x[i])
-print(r)
+a=input()
+b=input()
+s=0
+for i in b:
+    s+=int(i)
+print(s)
