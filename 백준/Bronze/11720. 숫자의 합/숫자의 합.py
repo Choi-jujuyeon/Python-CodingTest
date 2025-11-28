@@ -1,6 +1,5 @@
-a=input()
-b=input()
+n=input()
 s=0
-for i in b:
+for i in input():
     s+=int(i)
 print(s)
