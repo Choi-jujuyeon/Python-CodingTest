@@ -1,19 +1,16 @@
-def play(a,b):
-    if dic[a]=="가위":
-        if dic[b]=="바위":
-            print('B')
-        else:
-            print('A')
-    elif dic[a]=="바위":
-        if dic[b] =="가위":
-            print('A')
-        else:
-            print('B')
-    elif dic[a]=="보":
-        if dic[b] =="가위":
-            print('B')
-        else:
-            print('A')
-dic={1:'가위',2:"바위",3:"보"}
-a,b=map(int,input().split())
-play(a,b)
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        
+        if ((A==1 && B==3) || (A==2 && B==1) || (A==3 && B==2)){
+            System.out.println("A");
+        }else{
+            System.out.println("B");
+        }
+    }    
+}
