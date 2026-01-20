@@ -1,10 +1,10 @@
 # [level 0] 대소문자 바꿔서 출력하기 - 181949 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181949) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181949?language=java) 
 
 ### 성능 요약
 
-메모리: 7.35 MB, 시간: 30.36 ms
+메모리: 75.7 MB, 시간: 185.09 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 02월 12일 16:06:21
+2026년 01월 20일 17:42:12
 
 ### 문제 설명
 
