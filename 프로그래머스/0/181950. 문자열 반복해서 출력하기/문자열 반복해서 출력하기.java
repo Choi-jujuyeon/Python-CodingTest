@@ -6,8 +6,6 @@ public class Solution {
         String str = sc.next();
         int n = sc.nextInt();
         
-        for(int i=0; i<n; i++){
-            System.out.printf(str);
-        }
+       System.out.printf(str.repeat(n));
     }
 }
