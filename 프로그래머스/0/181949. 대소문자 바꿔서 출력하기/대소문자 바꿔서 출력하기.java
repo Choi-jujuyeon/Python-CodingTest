@@ -6,10 +6,8 @@ public class Solution {
         String a = sc.next();
         
         StringBuilder sb = new StringBuilder();
-        
         for(int i=0; i<a.length(); i++){
-            char c = a.charAt(i);
-            
+            char c= a.charAt(i);
             if(Character.isUpperCase(c)){
                 sb.append(Character.toLowerCase(c));
             }else{
