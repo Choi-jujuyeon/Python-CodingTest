@@ -1,18 +1,16 @@
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
-        int[] scores = new int[N];
-
-        for (int i = 0; i < N; i++) {
-            scores[i] = sc.nextInt();
-        }
-        Arrays.sort(scores);
-
-        System.out.println(scores[N / 2]);
-    }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		
+		for(int i=0; i<n; i++)
+			arr[i] = sc.nextInt();
+		Arrays.sort(arr);
+		System.out.println(arr[n/2]);
+	}
 }
