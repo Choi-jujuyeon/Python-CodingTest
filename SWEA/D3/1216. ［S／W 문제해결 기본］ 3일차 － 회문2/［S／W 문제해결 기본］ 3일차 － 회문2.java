@@ -9,7 +9,7 @@ public class Solution {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         for (int tc = 1; tc <= 10; tc++) {
-            int testNum = Integer.parseInt(br.readLine().trim()); 
+            int testNum = Integer.parseInt(br.readLine().trim());
 
             char[][] arr = new char[N][N];
 
@@ -21,7 +21,7 @@ public class Solution {
             }
 
             int result = findResult(arr);
-            System.out.println("#" + testNum + " " + result); 
+            System.out.println("#" + testNum + " " + result);
         }
     }
 
@@ -36,7 +36,8 @@ public class Solution {
     static boolean rowCheck(char[][] arr, int len) {
         for (int row = 0; row < N; row++) {
             for (int start = 0; start <= N - len; start++) {
-                if (rowPal(arr, row, start, len)) return true;
+                if (RowPalindrome(arr, row, start, len))
+                    return true;
             }
         }
         return false;
@@ -45,27 +46,36 @@ public class Solution {
     static boolean colCheck(char[][] arr, int len) {
         for (int col = 0; col < N; col++) {
             for (int start = 0; start <= N - len; start++) {
-                if (colPal(arr, col, start, len)) return true;
+                if (ColPalindrome(arr, col, start, len))
+                    return true;
             }
         }
         return false;
     }
 
-    static boolean rowPal(char[][] arr, int row, int start, int len) {
-        int lp = start, rp = start + len - 1;
-        while (lp < rp) {
-            if (arr[row][lp] != arr[row][rp]) return false;
-            lp++; rp--;
+    static boolean RowPalindrome(char[][] arr, int row, int start, int len) {
+        StringBuilder sb = new StringBuilder(len);
+
+        for (int j = start; j < start + len; j++) {
+            sb.append(arr[row][j]);
         }
-        return true;
+
+        String origin = sb.toString();
+        String reversed = sb.reverse().toString();
+
+        return origin.equals(reversed);
     }
 
-    static boolean colPal(char[][] arr, int col, int start, int len) {
-        int lp = start, rp = start + len - 1;
-        while (lp < rp) {
-            if (arr[lp][col] != arr[rp][col]) return false;
-            lp++; rp--;
+    static boolean ColPalindrome(char[][] arr, int col, int start, int len) {
+        StringBuilder sb = new StringBuilder(len);
+
+        for (int i = start; i < start + len; i++) {
+            sb.append(arr[i][col]);
         }
-        return true;
+
+        String origin = sb.toString();
+        String reversed = sb.reverse().toString();
+
+        return origin.equals(reversed);
     }
 }
