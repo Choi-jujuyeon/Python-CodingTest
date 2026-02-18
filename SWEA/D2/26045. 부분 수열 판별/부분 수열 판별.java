@@ -1,41 +1,36 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
-class Solution {
+class Solution{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
 		int T = sc.nextInt();
-		for (int tc = 1; tc <= T; tc++) {
+		
+		for(int tc=1; tc<=T; tc++) {
 			int N = sc.nextInt();
 			int M = sc.nextInt();
-            sc.nextLine(); // nextInt() 뒤에 남아있는 엔터 처리**********
-
-
-			String[] arrA = sc.nextLine().trim().split(" ");
-			String[] arrB = sc.nextLine().trim().split(" ");
-
-		
-			int idx = 0;
-			boolean ok =true;
 			
-			for (int i = 0; i < M; i++) {
-				boolean check = false;
-				for (int j = idx; j < N; j++) {
-					if (arrB[i].equals(arrA[j])) {
-						idx = j+1;
-						check = true;
+			int[] arrN = new int[N];
+			int[] arrM = new int[M];
+			
+			for(int i=0; i<N; i++) arrN[i] =sc.nextInt();
+			for(int j=0; j<M; j++) arrM[j] = sc.nextInt();
+			
+			int idx=0;
+			boolean result = false;
+			
+			for(int i=0; i<M; i++) {
+				result=false;
+				for(int j=idx; j<N; j++) {
+					if(arrM[i]== arrN[j]) {
+						idx=j+1;
+						result=true;
 						break;
 					}
-
 				}
-				if (!check) {
-					ok=false;
-					break;
-				}
+				if(!result) break; 
 			}
-			System.out.println("#" + tc + " " + (ok ? "YES" : "NO"));
+			
+			System.out.println("#"+tc+" "+(result?"YES":"NO"));
 		}
-
 	}
 }
