@@ -1,38 +1,49 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-class Solution {
-
-    static int N, K, cnt;
-    static int[] arr;
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int T = sc.nextInt();
-
-        for (int tc = 1; tc <= T; tc++) {
-
-            N = sc.nextInt();
-            K = sc.nextInt();
-
-            arr = new int[N];
-            for (int i = 0; i < N; i++)
-                arr[i] = sc.nextInt();
-
-            cnt = 0;
-
-            dfs(0, 0);
-            System.out.println("#" + tc + " " + cnt);
-        }
-    }
-
-    static void dfs(int idx, int sum) {
-
-        if (idx == N) {
-            if (sum == K) cnt++;
-            return;
-        }
-        dfs(idx + 1, sum);
-        dfs(idx + 1, sum + arr[idx]);
-    }
+class Solution{
+	static int K,N;
+	static int cnt;
+	static int[] arr;
+	
+	static void check(int idx, int sum) {
+		if(sum > K) return;
+		
+		if(idx==N) {
+			if(sum==K) cnt++;
+			return;
+		}
+		
+		//포함
+		check(idx+1, sum+arr[idx]);
+		//불포함
+		check(idx+1, sum);
+		
+	}
+	
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		
+		int T = Integer.parseInt(br.readLine().trim());
+		for(int tc=1; tc<=T; tc++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			N = Integer.parseInt(st.nextToken());
+			K = Integer.parseInt(st.nextToken());
+			
+			st=new StringTokenizer(br.readLine());
+			arr = new int[N];
+			for(int i=0; i<N; i++) arr[i] = Integer.parseInt(st.nextToken());
+			
+			cnt=0;
+			check(0,0);
+			
+			System.out.println("#"+tc+" "+cnt);
+		}
+		
+		
+	}
 }
