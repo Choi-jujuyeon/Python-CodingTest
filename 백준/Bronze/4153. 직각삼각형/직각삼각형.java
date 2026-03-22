@@ -1,19 +1,30 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+class Main{
+	  public static void main(String[] args) throws IOException {
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		
 		while(true) {
-			int a = sc.nextInt();
-			int b = sc.nextInt();
-			int c = sc.nextInt();
+			StringTokenizer st = new StringTokenizer(br.readLine().trim());
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
+			int c = Integer.parseInt(st.nextToken());
 			
-			if(a==0 && b==0 && c==0) break;
+			if(a == 0 && b==0 && c==0) break;
 			
-			int[] arr = {a,b,c};
-			Arrays.sort(arr);
-			System.out.println(arr[2]*arr[2]==arr[1]*arr[1]+arr[0]*arr[0]?"right":"wrong");
+			int max = Math.max(a, Math.max(b, c));
+			
+			boolean check=false;
+			if(a==max) check = (a*a == b*b+c*c);
+			else if(b==max) check = (b*b == a*a+c*c);
+			else check = (c*c == b*b+a*a);
+			
+			System.out.println(check?"right":"wrong");
+			
+			
 		}
 	}
 }
