@@ -1,30 +1,25 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 class Main{
-	
-	//자릿수 체크ㄱㄱ
-	static long check(int x) {
-		int sum=0;
-		while(x>0) {
-			sum+=x%10;
-			x/=10;
-		}
-		return sum;
-	}
-	
-	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	public static void main(String[] args) {
 		
-		int N = Integer.parseInt(br.readLine().trim());
-		int min =0;
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int ans =0;
 		for(int i=1; i<N; i++) {
-			if(i+check(i) == N) {
-				min=i;
+			int sum = i;
+			int tmp = i;
+			
+			while(tmp>0) {
+				sum += tmp%10;
+				tmp /=10;
+			}
+			if(sum == N) {
+				ans = i;
 				break;
 			}
 		}
-		System.out.println(min);
+		
+		System.out.println(ans);
 	}
 }
