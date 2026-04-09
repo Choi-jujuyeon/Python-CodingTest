@@ -15,6 +15,6 @@ class Main{
 			tmp += x%10;
 			x = x/10;
 		}
-		System.out.println((x%2==0 && tmp%5==0)?"Yes":"No" );
+		System.out.println((n%2==0 && tmp%5==0)?"Yes":"No" );
 	}
 }
