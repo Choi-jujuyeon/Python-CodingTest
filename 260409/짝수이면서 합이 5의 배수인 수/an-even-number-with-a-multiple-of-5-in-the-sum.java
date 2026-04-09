@@ -9,15 +9,12 @@ class Main{
 		
 	}
 	static void check(int x) {
-		if(x%2==0) {
-			int tmp =0;
-			while(x>0) {
-				tmp += x%10;
-				x = x/10;
-			}
-			if(tmp%5 ==0) System.out.println("Yes");
+		int n = x;
+		int tmp =0;
+		while(x>0) {
+			tmp += x%10;
+			x = x/10;
 		}
-		else
-			System.out.println("No");
+		System.out.println((x%2==0 && tmp%5==0)?"Yes":"No" );
 	}
 }
