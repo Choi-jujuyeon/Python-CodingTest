@@ -8,25 +8,50 @@ class Main {
 		String o = sc.next();
 		int b = sc.nextInt();
 		
+		int result = 0;
+		boolean flag = true;
 		
 		switch(o) {
 		case "+":
-			System.out.println(a+b);
+			result = add(a, b);
 			break;
 		case "-":
-			System.out.println(a-b);
+			result = sub(a, b);
 			break;
 		case "*":
-			System.out.println(a*b);
-            break;
+			result = mul(a, b);
+			break;
 		case "/":
-			System.out.println(a/b);
-            break;
+			result = div(a, b);
+			break;
 		default:
-			System.out.println("False");
-            
-
+			flag = false;
 		}
 		
+		if(flag) {
+			System.out.println(a + " " + o + " " + b + " = " + result);
+		} else {
+			System.out.println("False");
+		}
+	}
+	
+	// 덧셈
+	static int add(int x, int y) {
+		return x + y;
+	}
+	
+	// 뺄셈
+	static int sub(int x, int y) {
+		return x - y;
+	}
+	
+	// 곱셈
+	static int mul(int x, int y) {
+		return x * y;
+	}
+	
+	// 나눗셈 (정수 나눗셈)
+	static int div(int x, int y) {
+		return x / y;
 	}
 }
