@@ -1,4 +1,4 @@
-a=str(1)
-b=str(2)
+a=1
+b=2
 c='C'
-print(a+"->"+b+"->"+c)
+print(a,b,c, sep="->")
